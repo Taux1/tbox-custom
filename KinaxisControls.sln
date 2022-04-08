@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinaxisControls", "KinaxisControls\KinaxisControls.csproj", "{99DFAF54-C04C-422C-8EF9-2C63F98DDADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99DFAF54-C04C-422C-8EF9-2C63F98DDADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DFAF54-C04C-422C-8EF9-2C63F98DDADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DFAF54-C04C-422C-8EF9-2C63F98DDADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DFAF54-C04C-422C-8EF9-2C63F98DDADA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D617F93B-D8E4-44EF-A423-1B5482D57E7F}
+	EndGlobalSection
+EndGlobal

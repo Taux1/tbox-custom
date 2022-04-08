@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99DFAF54-C04C-422C-8EF9-2C63F98DDADA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tricentis.Automation.Engines</RootNamespace>
+    <AssemblyName>Tricentis.Automation.Java.KinaxisControls</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(TRICENTIS_PROJECTS)Custom Controls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(TRICENTIS_PROJECTS)Custom Controls\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tricentis.Automation.Interaction">
+      <HintPath>$(TBOX_HOME)Tricentis.Automation.Interaction.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tricentis.Automation.JavaAwtEngine">
+      <!-- old reference 
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\TRICENTIS\Tosca Testsuite\TBox\Engines\Tricentis.Automation.JavaAwtEngine.dll</HintPath>
+    -->
+      <HintPath>$(TBOX_HOME)Engines\Tricentis.Automation.JavaAwtEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tricentis.Automation.JavaEngine">
+      <!-- old reference
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\TRICENTIS\Tosca Testsuite\TBox\Engines\Tricentis.Automation.JavaEngine.dll</HintPath>
+    -->
+      <HintPath>$(TBOX_HOME)Engines\Tricentis.Automation.JavaEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tricentis.Automation.JavaSwingEngine">
+      <!-- old reference
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\TRICENTIS\Tosca Testsuite\TBox\Engines\Tricentis.Automation.JavaSwingEngine.dll</HintPath>
+    -->
+      <HintPath>$(TBOX_HOME)Engines\Tricentis.Automation.JavaSwingEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tricentis.AutomationBase">
+      <HintPath>$(TBOX_HOME)Tricentis.AutomationBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tricentis.AutomationObjects">
+      <HintPath>$(TBOX_HOME)Tricentis.AutomationObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tricentis.Common.MiscHelper">
+      <HintPath>$(TBOX_HOME)Tricentis.Common.MiscHelper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\Controllers\JavaSwing\Jide\JideTabControlAdapterController.cs" />
+    <Compile Include="Adapters\Controllers\JavaSwing\KinaxisGridAdapterController.cs" />
+    <Compile Include="Adapters\Controllers\JavaSwing\KinaxisGridRowAdapterController.cs" />
+    <Compile Include="Adapters\Controllers\JavaSwing\KinaxisGridCellAdapterController.cs" />
+    <Compile Include="Adapters\Controllers\JavaSwing\KinaxisPieChartAdapterController.cs" />
+    <Compile Include="Adapters\Controllers\JavaSwing\KinaxisWorkbookPieChartAdapterController.cs" />
+    <Compile Include="Adapters\JavaSwing\EmbeddedControls\Generic\KinaxisEmbeddedControlAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\EmbeddedControls\KinaxisEmbeddedCheckBoxAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\EmbeddedControls\KinaxisEmbeddedTextBoxAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\Jide\JideTabControlAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\Jide\JideTabItemAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\KinaxisGridAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\KinaxisGridCellAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\EmbeddedControls\KinaxisEmbeddedLinkAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\KinaxisGridHeaderCellAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\KinaxisGridRowAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\KinaxisPieChartAdapter.cs" />
+    <Compile Include="Adapters\JavaSwing\KinaxisWorkbookPieChartAdapter.cs" />
+	<Compile Include="Adapters\JavaSwing\PieChartItemAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Technicals\JavaSwing\BusyComboBoxTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\ComboBoxTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\JideSoft\AutoHideContainerTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\JideSoft\AutoHideMouseListenerTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\JideSoft\BasicSidePaneUITechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\JideSoft\SidePaneGroupTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\JideSoft\SidePaneItemTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\JideSoft\SidePaneTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\PieChartTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\WorkbookPieChartTechnical.cs" />
+    <Compile Include="Technicals\Java\MouseEventTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\CellLocationTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\DataManagerTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\DataRowTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\EditManagerTechnical.cs" />
+    <Compile Include="Technicals\Java\JavaIntegerTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\JCellTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\JEditorTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\ColumnInfoTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\Kinaxis\Grid\JGridTechnical.cs" />
+    <Compile Include="Technicals\JavaSwing\Kinaxis\Grid\JSheetAppletTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\JModuleDocTechnical.cs" />
+    <Compile Include="Technicals\Java\Kinaxis\Grid\WorksheetSelectionModelTechnical.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentation\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>taskkill /f /im Tricentis.Automation.Agent.exe /fi "memusage gt 40"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
